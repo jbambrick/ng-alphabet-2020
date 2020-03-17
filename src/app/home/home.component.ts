@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onClickMe(){
+    console.log(`You clicked me on page ${this.title}`);
+  }
 }
