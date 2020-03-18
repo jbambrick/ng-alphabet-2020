@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'Tŝilhqot’in Alphabet';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  onClickMe(){
-    console.log(`You clicked me on page ${this.title}`);
+  onTapMenuButton(){
+    console.log(`Menu button tapped.`);
+    this.router.navigateByUrl('/menu');
+  }
+
+  onTapCreditsButton(){
+    console.log(`Credits button tapped`);
+    this.router.navigateByUrl('/credits');
   }
 }
