@@ -1,1 +1,7 @@
-<app-tile [tileID]=3 (getID)="receiveID($event)"></app-tile>
+<div class="container-fluid">
+    <div class="row" *ngFor="let menuRow of menuRows">
+      <div class="col-4" *ngFor="let column of menuRow">
+        <app-tile [tileID]= "column.id" (getID)="receiveID($event)"></app-tile> 
+      </div>
+    </div>
+  </div> 
