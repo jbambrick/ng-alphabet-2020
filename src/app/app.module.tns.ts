@@ -7,6 +7,7 @@ import { HomeComponent } from '@src/app/home/home.component';
 import { CreditsComponent } from '@src/app/credits/credits.component';
 import { MenuComponent } from '@src/app/menu/menu.component';
 import { TileComponent } from '@src/app/tile/tile.component';
+import { DetailComponent } from '@src/app/detail/detail.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -22,6 +23,7 @@ import { TileComponent } from '@src/app/tile/tile.component';
     CreditsComponent,
     MenuComponent,
     TileComponent,
+    DetailComponent,
   ],
   imports: [
     NativeScriptModule,

@@ -31,7 +31,7 @@ export class MenuComponent implements OnInit {
     {id:"49"}
   ]];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -40,8 +40,9 @@ export class MenuComponent implements OnInit {
     console.log('Item tapped');
   }
 
-  receiveID(id: string){
-    console.log(`You clicked tile ${id}`);
+  goToDetailWithTile(tileID: string){
+    console.log(`You clicked tile ${tileID}`);
+    this.router.navigateByUrl('/detail', { state: { id: tileID } });
   }
 
 }

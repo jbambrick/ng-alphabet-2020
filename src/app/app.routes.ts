@@ -4,6 +4,7 @@ import { HomeComponent } from '@src/app/home/home.component';
 import { MenuComponent } from '@src/app/menu/menu.component';
 import { TileComponent } from '@src/app/tile/tile.component';
 import { CreditsComponent } from '@src/app/credits/credits.component';
+import { DetailComponent } from './detail/detail.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path: 'credits',
     component: CreditsComponent
+  },
+  {
+    path: 'detail',
+    component: DetailComponent
   }
 ];
