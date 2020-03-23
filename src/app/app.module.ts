@@ -8,6 +8,8 @@ import { CreditsComponent } from '@src/app/credits/credits.component';
 import { MenuComponent } from '@src/app/menu/menu.component';
 import { TileComponent } from '@src/app/tile/tile.component';
 import { DetailComponent } from '@src/app/detail/detail.component';
+import { TestComponent } from '@src/app/test/test.component';
+import { TestSyntaxComponent } from '@src/app/test-syntax/test-syntax.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { DetailComponent } from '@src/app/detail/detail.component';
     MenuComponent,
     TileComponent,
     DetailComponent,
+    TestComponent,
+    TestSyntaxComponent,
   ],
   imports: [
     BrowserModule,
