@@ -1,4 +1,5 @@
-<img alt="PREV" class="nav-arrow" src="assets/images/left_arrow.png">
-<app-tile [tileID]= "currentID"></app-tile> 
-<img alt="NEXT" class="nav-arrow" src="assets/images/right_arrow.png">
+<img  class="nav-arrow" alt="PREV" src="assets/images/left_arrow.png" (click)="clickPrev()">
+<app-tile [tileID]="currentID"></app-tile> 
+<img  class="nav-arrow" alt="NEXT" src="assets/images/right_arrow.png" (click)="clickNext()">
+<p>Current tile id in parent: {{ currentID }}</p>
 

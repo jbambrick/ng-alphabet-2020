@@ -24,7 +24,25 @@ export class DetailComponent implements OnInit {
         console.log(`Got ${state.id} from state`);
         this.currentID = state.id;
       }
-    })
+    });
+  }
+
+  clickNext(){
+    this.currentID = String(this.cyclicIncrement(Number(this.currentID),1,53)); // @TODO fix magic numbers later
+  }
+
+  clickPrev(){
+    this.currentID = String(this.cyclicDecrement(Number(this.currentID),1,53)); // @TODO fix magic numbers later
+  }
+
+  cyclicIncrement(n: number, min: number, max: number){
+    if(!Number.isInteger(n)||n<min || n>max) throw new Error(`Number to increment outside of range (min-max)`);
+    return (n++===max)?min:n;
+  }
+
+  cyclicDecrement(n: number, min: number, max: number){
+    if(!Number.isInteger(n)||n<min || n>max) throw new Error(`Number to increment outside of range (min-max)`);
+    return (n--===min)?max:n;
   }
 }
 
