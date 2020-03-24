@@ -49,3 +49,5 @@ Thumbs.db
 *.wav
 *.ogg
 
+# Local Data
+/src/app/data.json
