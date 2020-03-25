@@ -46,7 +46,7 @@ export class TileComponent implements OnInit {
   }
 
   private createImagePath(tileNumber: string): string{
-    let singleDigitTileNumber: boolean = Number(tileNumber)<9;
+    let singleDigitTileNumber: boolean = Number(tileNumber)<10;
     console.log(`Number: ${Number(tileNumber)} is bigger than 9? ${singleDigitTileNumber}`)
     return singleDigitTileNumber?`assets/images/p0${tileNumber}.png`:`assets/images/p${tileNumber}.png`;
   }
