@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IAlphabetData } from '../interfaces';
-import { DataService } from '../data.service'
+import { DataService } from '../data.service';
+import { AudioService } from '../audio.service';
 
 @Component({
   selector: 'app-tile',
@@ -27,7 +28,9 @@ export class TileComponent implements OnInit {
   private currentWord: String = "";
   private currentImagePath: string = "assets/images/logo.png";
   private alphabetData: IAlphabetData;
-  constructor(private dataService: DataService) { }
+  private currentAudioPath: string = "test";
+
+  constructor(private dataService: DataService, private audio: AudioService) { }
 
   ngOnInit() {
     
@@ -39,6 +42,7 @@ export class TileComponent implements OnInit {
 
   sendID(){
     this.getID.emit(this.tileID);
+    this.audio.playAudio(this.currentAudioPath);
   }
 
   private updateImagePath(id: string){

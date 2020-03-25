@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class AudioService {
 
   constructor() { }
+
+  playAudio(audioFilePath: string){
+    console.log(`Playing audio file: ${audioFilePath}`);
+  }
 }
