@@ -55,6 +55,12 @@ export class TileComponent implements OnInit {
     return singleDigitTileNumber?`assets/images/p0${tileNumber}.png`:`assets/images/p${tileNumber}.png`;
   }
 
+  private createAudioPathForWord(tileNumber: string): string{
+    let singleDigitTileNumber: boolean = Number(tileNumber)<10;
+    console.log(`Number: ${Number(tileNumber)} is bigger than 9? ${singleDigitTileNumber}`)
+    return singleDigitTileNumber?`assets/sounds/S0${tileNumber}.png`:`assets/sounds/S${tileNumber}.mp3`;
+  }
+
   private updateLetter(id: string){
     let newLetter: string = this.alphabetData.letter[id];
     console.log(`New Letter: ${newLetter}`);
@@ -65,8 +71,13 @@ export class TileComponent implements OnInit {
     (this.alphabetData)? this.currentWord = this.alphabetData.word[id]: this.currentWord = "";
   }
 
+  private updateAudioPath(id: string){
+    this.currentAudioPath = this.createAudioPathForWord(id);
+  }
+
   private updateTileData(id: string){
     this.updateImagePath(id);
+    this.updateAudioPath(id);
     this.updateLetter(id);
     this.updateWord(id);
   }
