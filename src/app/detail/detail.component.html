@@ -1,5 +1,12 @@
-<img  class="nav-arrow" alt="PREV" src="assets/images/left_arrow.png" (click)="clickPrev()">
-<app-tile [tileID]="currentID"></app-tile> 
-<img  class="nav-arrow" alt="NEXT" src="assets/images/right_arrow.png" (click)="clickNext()">
+<div class="container" style="margin-top: 50px;">
+<div class="container" style="align-content: center;">
+    <app-tile [tileID]="currentID"></app-tile> 
+</div>
+
+<div class="container">
+    <img  class="nav-arrow" alt="PREV" src="\assets\Images\left_arrow_test.png" (click)="clickPrev()">
+    <img  class="nav-arrow" alt="NEXT" src="\assets\Images\right_arrow_test.png" (click)="clickNext()">
+</div>
 <p>Current tile id in parent: {{ currentID }}</p>
+</div>
 

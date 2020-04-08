@@ -1,13 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="assets/images/logo.png">
+<div style="text-align:center; padding: 25px;">
+  <div class="container" id="header" style="background-color: inherit; width: 500px;">
+    <h1 style="color: white;">
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  
+<img width="170" alt="Angular Logo" src="\assets\Images\logo_copy.png">
+  
+<div class="container" style="padding: 25px;">
   <div id="buttons">
-    <button (click)="onTapMenuButton()">Menu</button>
-    <button (click)="onTapCreditsButton()">Credits</button>
+    <div class="container">
+      <button (click)="onTapMenuButton()">Menu</button>
+    </div>
+    <div class="container">
+      <button (click)="onTapCreditsButton()">Credits</button>
+    </div>
   </div>
 </div>
 
+<div class="container">
+  <li>© 2020 Tŝilhqot'in National Government</li>
+  <li>ALL RIGHTS RESERVED</li>
+</div>
 
