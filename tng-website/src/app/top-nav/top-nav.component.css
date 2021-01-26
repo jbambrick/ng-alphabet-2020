@@ -1,0 +1,15 @@
+.container-fluid {
+    background-color: black;
+    color: rgb(184, 184, 184);
+    height: 40px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    display: block;
+    padding: 5px
+}
+
+@media only screen and (max-width: 800px) {
+    #email {
+      display: none;
+    }
+  }

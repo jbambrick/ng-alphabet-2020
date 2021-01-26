@@ -1,0 +1,14 @@
+.navbar {
+    height: 120px;
+    padding-left: 50px;
+    box-shadow:10px 10px 50px black;
+    color: green;
+}
+
+#nav-link {
+    color: green;
+}
+
+.nav-item {
+    padding: 10px;
+}
